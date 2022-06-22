@@ -44,6 +44,10 @@ function onStartTimer(){
       seconds.textContent = '00';
       return;
     }
+    if (timerStart) {
+      inputRef.disabled = true;
+      btnRef.disabled = true;
+    }
     const formatedDate = convertMs(date);
     console.log(formatedDate);
     timerStart(formatedDate);
